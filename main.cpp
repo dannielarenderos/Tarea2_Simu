@@ -4,17 +4,13 @@
 
 using namespace std;
 
-
-
 void readCoordinates(ifstream &file, int n, item* item_list){
     int e; float r;
     for(int i=0; i<n; i++){
       file >> e >> r;
       item_list[i].setIntFloat(e,r);    
+    }
 }
-}
-
-
 
 int main() {
     char filename[10];
@@ -43,8 +39,8 @@ int main() {
 
     file.close();
 
-     for(int i=0; i<nnodes; i++){
-         cout<<m.getNode(i).getX()<<endl;
+    for(int i=0; i<nnodes; i++){
+      cout<<m.getNode(i).getX()<<endl;
     }
 
     return 0;
